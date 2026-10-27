@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Outer AI monitoring circle -->
+  <circle cx="24" cy="24" r="22" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 3" opacity="0.4"/>
+  <circle cx="24" cy="24" r="20" fill="#0EA5E9" fill-opacity="0.08"/>
+  <circle cx="24" cy="24" r="4" fill="#0284C7"/>
+  
+  <!-- Turbine tower -->
+  <path d="M22.5 24L21 42H27L25.5 24H22.5Z" fill="#0369A1" opacity="0.85"/>
+  
+  <!-- 3 Turbine blades -->
+  <!-- Blade 1 (Up) -->
+  <path d="M24 24C24 24 22 14 23 7C24 6 25 7 25 14C25 18 24 24 24 24Z" fill="#0EA5E9"/>
+  <!-- Blade 2 (Bottom Right) -->
+  <path d="M24 24C24 24 33 29 39 33C40 34 39.5 35 33 32C29 30 24 24 24 24Z" fill="#38BDF8"/>
+  <!-- Blade 3 (Bottom Left) -->
+  <path d="M24 24C24 24 15 29 9 33C8 34 8.5 35 15 32C19 30 24 24 24 24Z" fill="#0284C7"/>
+  
+  <!-- Center hub highlight -->
+  <circle cx="24" cy="24" r="2" fill="#FFFFFF"/>
+</svg>

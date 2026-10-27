@@ -1,0 +1,117 @@
+{
+    "version": "1.0.0",
+    "timestamp": "2026-09-28T09:09:51.754750",
+    "fusion_weights": {
+        "performance_degradation": 0.35,
+        "overall_anomaly": 0.35,
+        "component_degradation": 0.3
+    },
+    "weighting_rationale": "Equal baseline weighting across the three diagnostic pillars.",
+    "normalization_parameters": {
+        "farm_a": {
+            "underperf_p99": 0.006364,
+            "ae_threshold_p99": 0.300068,
+            "if_p01": -0.1582,
+            "if_threshold_p99": 0.059651
+        },
+        "farm_b": {
+            "underperf_p99": 0.121469,
+            "ae_threshold_p99": 0.068492,
+            "if_p01": -0.1745,
+            "if_threshold_p99": 0.077759
+        }
+    },
+    "component_definitions": {
+        "farm_a": {
+            "gearbox": [
+                "dt_gearbox_bearing",
+                "dt_gearbox_oil",
+                "gear_oil_roll_mean_6",
+                "gear_oil_roll_std_6",
+                "gear_oil_roll_mean_24",
+                "gear_oil_rate_1h"
+            ],
+            "generator": [
+                "dt_gen_bearing_de",
+                "dt_gen_bearing_nde",
+                "dt_stator_windings",
+                "gen_bearing_roll_mean_6",
+                "gen_bearing_roll_std_6",
+                "gen_bearing_roll_mean_24",
+                "gen_bearing_rate_1h",
+                "sensor_18_std"
+            ],
+            "hydraulic": [
+                "dt_hydraulic_oil",
+                "hydraulic_roll_mean_6"
+            ],
+            "transformer": [
+                "dt_transformer"
+            ],
+            "electrical_grid": [
+                "current_unbalance",
+                "voltage_unbalance",
+                "grid_freq_deviation"
+            ],
+            "rotor_mechanical": [
+                "sensor_52_std"
+            ]
+        },
+        "farm_b": {
+            "generator": [
+                "dt_gen_bearing_1",
+                "dt_gen_bearing_2"
+            ],
+            "gearbox": [
+                "dt_gearbox_bearing_1",
+                "dt_gearbox_bearing_2",
+                "dt_gearbox_oil_inlet",
+                "dt_gearbox_oil_tank"
+            ],
+            "rotor_bearing": [
+                "dt_rotor_bearing_1",
+                "dt_rotor_bearing_2",
+                "rotor_bearing_roll_mean_6",
+                "rotor_bearing_roll_std_6",
+                "rotor_bearing_roll_mean_24",
+                "rotor_bearing_rate_1h"
+            ],
+            "transformer": [
+                "dt_transformer_cell",
+                "transformer_cell_roll_mean_6",
+                "transformer_cell_roll_std_6",
+                "transformer_cell_roll_mean_24",
+                "transformer_cell_rate_1h"
+            ],
+            "vibration_mechanical": [
+                "vibration_magnitude_tower",
+                "vibration_drivetrain_z",
+                "vibration_roll_mean_6",
+                "torque_total"
+            ],
+            "electrical_grid": [
+                "grid_freq_deviation"
+            ]
+        }
+    },
+    "health_index_formula": "100.0 * (1.0 - raw_degradation_score)",
+    "risk_score_formula": "100.0 - health_index",
+    "risk_categories": {
+        "LOW": [
+            0,
+            25
+        ],
+        "MEDIUM": [
+            25,
+            50
+        ],
+        "HIGH": [
+            50,
+            75
+        ],
+        "CRITICAL": [
+            75,
+            100
+        ]
+    }
+}

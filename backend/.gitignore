@@ -1,0 +1,31 @@
+# Environment variables
+.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Storage files (preserve structure with .gitkeep)
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/processed/*
+!storage/processed/.gitkeep
+storage/analysis_results/*
+!storage/analysis_results/.gitkeep
+storage/Wind Farm A/
+storage/Wind Farm B/
+storage/Wind Farm*/
+Wind Farm A/
+Wind Farm B/
+Wind Farm*/
+
+# Logs
+*.log

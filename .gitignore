@@ -1,0 +1,55 @@
+# Secrets and local environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python bytecode, test caches, and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.venv/
+venv/
+ENV/
+env/
+htmlcov/
+.coverage
+.coverage.*
+*.egg-info/
+
+# Node.js and frontend build output
+node_modules/
+/frontend/dist/
+/frontend/dist-ssr/
+
+# Generated storage data; keep the application directories in Git
+/backend/storage/*
+!/backend/storage/analysis_results/
+!/backend/storage/processed/
+!/backend/storage/uploads/
+/backend/storage/analysis_results/*
+!/backend/storage/analysis_results/.gitkeep
+/backend/storage/processed/*
+!/backend/storage/processed/.gitkeep
+/backend/storage/uploads/*
+!/backend/storage/uploads/.gitkeep
+
+# Logs, temporary files, and editor swap files
+logs/
+tmp/
+temp/
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
